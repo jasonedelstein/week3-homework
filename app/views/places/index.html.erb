@@ -1,0 +1,9 @@
+<ol>
+  <% @places.each do |place| %>
+    <li>
+      <p>
+        <%= link_to place.title, "/places/#{place.id}" %>
+      </p>
+    </li>
+  <% end %>
+</ol>

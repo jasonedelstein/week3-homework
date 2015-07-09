@@ -6,15 +6,14 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Places.delete_all
+Place.delete_all
 
-Places.create(:)
-Places.create()
-Places.create()
-Places.create()
-Places.create()
+Place.create(:title => "Spite", :photo_url => "http://echobazaar.wdfiles.com/local--files/art/spite.jpg", :price => 500, :description => "The ragged old market of Spite is known for its silk-weavers and its pickpockets. Blythenhale is notorious for its feral cats. Flowerdene Street is the heart of the worst rookery in Fallen London.")
 
-# Director.create(:name => "George Lucas", :poster_url => "http://ia.media-imdb.com/images/M/MV5BMTA0Mjc0NzExNzBeQTJeQWpwZ15BbWU3MDEzMzQ3MDI@._V1_UY317_CR0,0,214,317_AL_.jpg")
-# Director.create(:name => "Ron Howard", :poster_url => "http://ia.media-imdb.com/images/M/MV5BMTkzMDczMjUxNF5BMl5BanBnXkFtZTcwODY1Njk5Mg@@._V1_UX214_CR0,0,214,317_AL_.jpg")
-# Director.create(:name => "Steven Spielberg", :poster_url => "http://ia.media-imdb.com/images/M/MV5BMTY1NjAzNzE1MV5BMl5BanBnXkFtZTYwNTk0ODc0._V1_UX214_CR0,0,214,317_AL_.jpg")
-# Director.create(:name => "Robert Zemeckis", :poster_url => "http://ia.media-imdb.com/images/M/MV5BMTgyMTMzMDUyNl5BMl5BanBnXkFtZTcwODA0ODMyMw@@._V1_UX214_CR0,0,214,317_AL_.jpg")
+Place.create(:title => "Ladybones Road", :photo_url => "http://echobazaar.wdfiles.com/local--files/art/ladybones.jpg", :price => 1000, :description => "Moloch Street Underground Station is the first stop on the journey to Hell. Clathermont's Tattoo Parlour, haunt of spies, is here. Hangman's Arch can be a good place to hear gossip, and is always a good place for a hanging.")
+
+Place.create(:title => "The Bazaar", :photo_url => "http://echobazaar.wdfiles.com/local--files/art/header.jpg", :price => 4, :description => "The Bazaar is located at the heart of Fallen London, in the Neath, a cavern of impossible size, by the Unterzee, a tremendous saltwater lake. They say it's the skull of some defunct pagan god. That doesn't sound very likely. Although it would explain the dreams.")
+
+Place.create(:title => "Watchmaker's Hill", :photo_url => "http://echobazaar.wdfiles.com/local--files/art/watchmakershill.jpg", :price => 2000, :description => "A sinister fungal wilderness by the river. The Department of Menace Eradication subcontracts the adventurous to deal with the things that slither out of Bugsby's Marshes. An observatory atop the hill employs only blind men.")
+
+Place.create(:title => "Veilgarden", :photo_url => "http://echobazaar.wdfiles.com/local--files/art/veilgarden.jpg", :price => 90, :description => "A haunt of poets, prostitutes and other low types, and location of the notorious Singing Mandrake. Elderwick is famous for its booksellers. Hollow Street offers the best honey-dens in the city.")

@@ -10,3 +10,1152 @@ Started GET "/" for 127.0.0.1 at 2015-07-08 12:01:38 -0500
 Processing by Rails::WelcomeController#index as HTML
   Rendered /Users/jcohen/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/railties-4.1.8/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
 Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 18:10:00 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (2.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+SQLite3::SQLException: no such table: places: SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 105ms
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: places: SELECT "places".* FROM "places"):
+    1: <ol>
+    2:   <% @places.each do |place| %>
+    3:     <li>
+    4:       <p>
+    5:         <%= link_to place.title, "/places/#{place.id}" %>
+  app/views/places/index.html.erb:2:in `_app_views_places_index_html_erb___776404755_57284436'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.0ms)
+  [1m[36m (6.0ms)[0m  [1mCREATE TABLE "places" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (5.0ms)[0m  ALTER TABLE "places" ADD "title" varchar(255)
+  [1m[36m (4.0ms)[0m  [1mALTER TABLE "places" ADD "description" text[0m
+  [1m[35m (5.0ms)[0m  ALTER TABLE "places" ADD "photo_url" text
+  [1m[36m (5.0ms)[0m  [1mALTER TABLE "places" ADD "price" integer DEFAULT 0[0m
+  [1m[35m (4.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (5.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (7.0ms)[0m  DELETE FROM "places"
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "places"
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "places"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "places"
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "places"
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "places"
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "places"
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "places"
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "places"
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "places"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 18:40:28 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (10.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 3250ms
+
+ActionView::Template::Error (TypeError: Object doesn't support this property or method
+  (in C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/turbolinks-2.5.3/lib/assets/javascripts/turbolinks.js.coffee)):
+    4:   <title>Chicago</title>
+    5:   <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" %>
+    6:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    7:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    8:   <%= csrf_meta_tags %>
+    9: 
+   10:   <style>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__1056177159_55677672'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 18:42:12 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (2.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 3918ms (Views: 3879.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 18:43:29 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 18:45:46 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (1.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-08 18:46:01 -0500
+
+ActionController::RoutingError (No route matches [GET] "/places/2"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (21.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (97.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-08 18:46:01 -0500
+
+ActionController::RoutingError (No route matches [GET] "/places/2"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 18:46:19 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (1.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 1.0ms)
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "places"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "places"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "places" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "photo_url" text, "price" integer DEFAULT 0) [0m
+  [1m[35m (10.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (10.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "places" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "photo_url" text, "price" integer DEFAULT 0) [0m
+  [1m[35m (10.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (10.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "places"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "places"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "places"
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "places"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "places"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "places"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "places" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "photo_url" text, "price" integer DEFAULT 0) [0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (10.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "places" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "photo_url" text, "price" integer DEFAULT 0) [0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (10.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "places"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "places"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "places"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "The ragged old market of Spite is known for its silk-weavers and its pickpockets. Blythenhale is notorious for its feral cats. Flowerdene Street is the heart of the worst rookery in Fallen London."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/spite.jpg"], ["price", 500], ["title", "Spite"]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)[0m  [["description", "Moloch Street Underground Station is the first stop on the journey to Hell. Clathermont's Tattoo Parlour, haunt of spies, is here. Hangman's Arch can be a good place to hear gossip, and is always a good place for a hanging."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/ladybones.jpg"], ["price", 1000], ["title", "Ladybones Road"]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "The Bazaar is located at the heart of Fallen London, in the Neath, a cavern of impossible size, by the Unterzee, a tremendous saltwater lake. They say it's the skull of some defunct pagan god. That doesn't sound very likely. Although it would explain the dreams."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/header.jpg"], ["price", 4], ["title", "The Bazaar"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)[0m  [["description", "A sinister fungal wilderness by the river. The Department of Menace Eradication subcontracts the adventurous to deal with the things that slither out of Bugsby's Marshes. An observatory atop the hill employs only blind men."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/watchmakershill.jpg"], ["price", 2000], ["title", "Watchmaker's Hill"]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "A haunt of poets, prostitutes and other low types, and location of the notorious Singing Mandrake. Elderwick is famous for its booksellers. Hollow Street offers the best honey-dens in the city."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/veilgarden.jpg"], ["price", 90], ["title", "Veilgarden"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "places"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "The ragged old market of Spite is known for its silk-weavers and its pickpockets. Blythenhale is notorious for its feral cats. Flowerdene Street is the heart of the worst rookery in Fallen London."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/spite.jpg"], ["price", 500], ["title", "Spite"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "places"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "The ragged old market of Spite is known for its silk-weavers and its pickpockets. Blythenhale is notorious for its feral cats. Flowerdene Street is the heart of the worst rookery in Fallen London."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/spite.jpg"], ["price", 500], ["title", "Spite"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "places"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "The ragged old market of Spite is known for its silk-weavers and its pickpockets. Blythenhale is notorious for its feral cats. Flowerdene Street is the heart of the worst rookery in Fallen London."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/spite.jpg"], ["price", 500], ["title", "Spite"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)[0m  [["description", "Moloch Street Underground Station is the first stop on the journey to Hell. Clathermont's Tattoo Parlour, haunt of spies, is here. Hangman's Arch can be a good place to hear gossip, and is always a good place for a hanging."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/ladybones.jpg"], ["price", 1000], ["title", "Ladybones Road"]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "The Bazaar is located at the heart of Fallen London, in the Neath, a cavern of impossible size, by the Unterzee, a tremendous saltwater lake. They say it's the skull of some defunct pagan god. That doesn't sound very likely. Although it would explain the dreams."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/header.jpg"], ["price", 4], ["title", "The Bazaar"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)[0m  [["description", "A sinister fungal wilderness by the river. The Department of Menace Eradication subcontracts the adventurous to deal with the things that slither out of Bugsby's Marshes. An observatory atop the hill employs only blind men."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/watchmakershill.jpg"], ["price", 2000], ["title", "Watchmaker's Hill"]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (10.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "A haunt of poets, prostitutes and other low types, and location of the notorious Singing Mandrake. Elderwick is famous for its booksellers. Hollow Street offers the best honey-dens in the city."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/veilgarden.jpg"], ["price", 90], ["title", "Veilgarden"]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "places"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "The ragged old market of Spite is known for its silk-weavers and its pickpockets. Blythenhale is notorious for its feral cats. Flowerdene Street is the heart of the worst rookery in Fallen London."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/spite.jpg"], ["price", 500], ["title", "Spite"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)[0m  [["description", "Moloch Street Underground Station is the first stop on the journey to Hell. Clathermont's Tattoo Parlour, haunt of spies, is here. Hangman's Arch can be a good place to hear gossip, and is always a good place for a hanging."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/ladybones.jpg"], ["price", 1000], ["title", "Ladybones Road"]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "The Bazaar is located at the heart of Fallen London, in the Neath, a cavern of impossible size, by the Unterzee, a tremendous saltwater lake. They say it's the skull of some defunct pagan god. That doesn't sound very likely. Although it would explain the dreams."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/header.jpg"], ["price", 4], ["title", "The Bazaar"]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)[0m  [["description", "A sinister fungal wilderness by the river. The Department of Menace Eradication subcontracts the adventurous to deal with the things that slither out of Bugsby's Marshes. An observatory atop the hill employs only blind men."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/watchmakershill.jpg"], ["price", 2000], ["title", "Watchmaker's Hill"]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "A haunt of poets, prostitutes and other low types, and location of the notorious Singing Mandrake. Elderwick is famous for its booksellers. Hollow Street offers the best honey-dens in the city."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/veilgarden.jpg"], ["price", 90], ["title", "Veilgarden"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 19:28:31 -0500
+Processing by PlacesController#index as HTML
+Completed 500 Internal Server Error in 20ms
+
+NoMethodError (undefined method `root' for #<PlacesController:0x69806a0>):
+  app/controllers/places_controller.rb:4:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 19:32:26 -0500
+Processing by PlacesController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `get' for #<PlacesController:0x6d3ee10>):
+  app/controllers/places_controller.rb:5:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (38.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 19:33:24 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 80ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "places" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "photo_url" text, "price" integer DEFAULT 0) [0m
+  [1m[35m (10.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (10.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "places" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "photo_url" text, "price" integer DEFAULT 0) [0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (10.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "places"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "The ragged old market of Spite is known for its silk-weavers and its pickpockets. Blythenhale is notorious for its feral cats. Flowerdene Street is the heart of the worst rookery in Fallen London."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/spite.jpg"], ["price", 500], ["title", "Spite"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)[0m  [["description", "Moloch Street Underground Station is the first stop on the journey to Hell. Clathermont's Tattoo Parlour, haunt of spies, is here. Hangman's Arch can be a good place to hear gossip, and is always a good place for a hanging."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/ladybones.jpg"], ["price", 1000], ["title", "Ladybones Road"]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "The Bazaar is located at the heart of Fallen London, in the Neath, a cavern of impossible size, by the Unterzee, a tremendous saltwater lake. They say it's the skull of some defunct pagan god. That doesn't sound very likely. Although it would explain the dreams."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/header.jpg"], ["price", 4], ["title", "The Bazaar"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)[0m  [["description", "A sinister fungal wilderness by the river. The Department of Menace Eradication subcontracts the adventurous to deal with the things that slither out of Bugsby's Marshes. An observatory atop the hill employs only blind men."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/watchmakershill.jpg"], ["price", 2000], ["title", "Watchmaker's Hill"]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "A haunt of poets, prostitutes and other low types, and location of the notorious Singing Mandrake. Elderwick is famous for its booksellers. Hollow Street offers the best honey-dens in the city."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/veilgarden.jpg"], ["price", 90], ["title", "Veilgarden"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:02:52 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (4.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 185ms (Views: 117.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:03:20 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (1.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:03:32 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:05:03 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:05:16 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:05:48 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:06:16 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 80ms (Views: 80.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:07:50 -0500
+Processing by PlacesController#index as HTML
+  Rendered places/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 10ms
+
+SyntaxError (C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:7: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+...rrency(place.price, precision 2)/100);@output_buffer.safe_ap...
+...                               ^
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:7: syntax error, unexpected ')', expecting keyword_end
+...(place.price, precision 2)/100);@output_buffer.safe_append='...
+...                               ^):
+  app/views/places/index.html.erb:7: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+  app/views/places/index.html.erb:7: syntax error, unexpected ')', expecting keyword_end
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:08:01 -0500
+Processing by PlacesController#index as HTML
+  Rendered places/index.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 10ms
+
+SyntaxError (C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:7: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+...rrency(place.price, precision 2)/100></p>
+...                               ^
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:7: syntax error, unexpected '<'
+...place.price, precision 2)/100></p>
+...                               ^
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:8: unknown regexp option - p
+unmatched close parenthesis: /p>
+		<p><%= place.photo_url);@output_buffer.safe_append='</
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:9: syntax error, unexpected '<'
+      </p>
+       ^
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:10: unknown regexp option - l
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:12: unterminated regexp meets end of file
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:12: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/places/index.html.erb:7: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+  app/views/places/index.html.erb:7: syntax error, unexpected '<'
+  app/views/places/index.html.erb:8: unknown regexp option - p
+  app/views/places/index.html.erb:9: syntax error, unexpected '<'
+  app/views/places/index.html.erb:10: unknown regexp option - l
+  app/views/places/index.html.erb:12: unterminated regexp meets end of file
+  app/views/places/index.html.erb:12: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:08:14 -0500
+Processing by PlacesController#index as HTML
+  Rendered places/index.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 10ms
+
+SyntaxError (C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:7: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+...cy(place.price/100, precision 2)></p>
+...                               ^
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:7: syntax error, unexpected '<'
+...place.price/100, precision 2)></p>
+...                               ^
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:8: unknown regexp option - p
+unmatched close parenthesis: /p>
+		<p><%= place.photo_url);@output_buffer.safe_append='</
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:9: syntax error, unexpected '<'
+      </p>
+       ^
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:10: unknown regexp option - l
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:12: unterminated regexp meets end of file
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:12: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/places/index.html.erb:7: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+  app/views/places/index.html.erb:7: syntax error, unexpected '<'
+  app/views/places/index.html.erb:8: unknown regexp option - p
+  app/views/places/index.html.erb:9: syntax error, unexpected '<'
+  app/views/places/index.html.erb:10: unknown regexp option - l
+  app/views/places/index.html.erb:12: unterminated regexp meets end of file
+  app/views/places/index.html.erb:12: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:08:34 -0500
+Processing by PlacesController#index as HTML
+  Rendered places/index.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 0ms
+
+SyntaxError (C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:7: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+...rrency(place.price, precision 2)></p>
+...                               ^
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:7: syntax error, unexpected '<'
+...ncy(place.price, precision 2)></p>
+...                               ^
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:8: unknown regexp option - p
+unmatched close parenthesis: /p>
+		<p><%= place.photo_url);@output_buffer.safe_append='</
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:9: syntax error, unexpected '<'
+      </p>
+       ^
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:10: unknown regexp option - l
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:12: unterminated regexp meets end of file
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:12: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/places/index.html.erb:7: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+  app/views/places/index.html.erb:7: syntax error, unexpected '<'
+  app/views/places/index.html.erb:8: unknown regexp option - p
+  app/views/places/index.html.erb:9: syntax error, unexpected '<'
+  app/views/places/index.html.erb:10: unknown regexp option - l
+  app/views/places/index.html.erb:12: unterminated regexp meets end of file
+  app/views/places/index.html.erb:12: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:08:47 -0500
+Processing by PlacesController#index as HTML
+  Rendered places/index.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 0ms
+
+SyntaxError (C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:7: syntax error, unexpected '<'
+...lace.price/100, precision: 2)></p>
+...                               ^
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:8: unknown regexp option - p
+unmatched close parenthesis: /p>
+		<p><%= place.photo_url);@output_buffer.safe_append='</
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:9: syntax error, unexpected '<'
+      </p>
+       ^
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:10: unknown regexp option - l
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:12: unterminated regexp meets end of file
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:12: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/places/index.html.erb:7: syntax error, unexpected '<'
+  app/views/places/index.html.erb:8: unknown regexp option - p
+  app/views/places/index.html.erb:9: syntax error, unexpected '<'
+  app/views/places/index.html.erb:10: unknown regexp option - l
+  app/views/places/index.html.erb:12: unterminated regexp meets end of file
+  app/views/places/index.html.erb:12: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:09:02 -0500
+Processing by PlacesController#index as HTML
+  Rendered places/index.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 0ms
+
+SyntaxError (C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:7: syntax error, unexpected '<'
+...ce.price / 100, precision: 2)></p>
+...                               ^
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:8: unknown regexp option - p
+unmatched close parenthesis: /p>
+		<p><%= place.photo_url);@output_buffer.safe_append='</
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:9: syntax error, unexpected '<'
+      </p>
+       ^
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:10: unknown regexp option - l
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:12: unterminated regexp meets end of file
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:12: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/places/index.html.erb:7: syntax error, unexpected '<'
+  app/views/places/index.html.erb:8: unknown regexp option - p
+  app/views/places/index.html.erb:9: syntax error, unexpected '<'
+  app/views/places/index.html.erb:10: unknown regexp option - l
+  app/views/places/index.html.erb:12: unterminated regexp meets end of file
+  app/views/places/index.html.erb:12: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:09:08 -0500
+Processing by PlacesController#index as HTML
+  Rendered places/index.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 0ms
+
+SyntaxError (C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:7: syntax error, unexpected '<'
+...cy(place.price, precision: 2)></p>
+...                               ^
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:8: unknown regexp option - p
+unmatched close parenthesis: /p>
+		<p><%= place.photo_url);@output_buffer.safe_append='</
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:9: syntax error, unexpected '<'
+      </p>
+       ^
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:10: unknown regexp option - l
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:12: unterminated regexp meets end of file
+C:/Users/Jason Edelstein/Documents/week3-homework/app/views/places/index.html.erb:12: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/places/index.html.erb:7: syntax error, unexpected '<'
+  app/views/places/index.html.erb:8: unknown regexp option - p
+  app/views/places/index.html.erb:9: syntax error, unexpected '<'
+  app/views/places/index.html.erb:10: unknown regexp option - l
+  app/views/places/index.html.erb:12: unterminated regexp meets end of file
+  app/views/places/index.html.erb:12: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:09:35 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:15:15 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:15:53 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 40ms (Views: 30.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-08 20:15:55 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1[0m
+Completed 500 Internal Server Error in 20ms
+
+ActionView::MissingTemplate (Missing template places/show, application/show with {:locale=>[:en], :formats=>[:html, :xml], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Jason Edelstein/Documents/week3-homework/app/views"
+):
+  actionview (4.1.8) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.8) lib/action_view/lookup_context.rb:124:in `find'
+  C:in `find_template'
+  actionview (4.1.8) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.8) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.8) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.8) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.8) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.8) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.8) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.8) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.8) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.8) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.8) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.8) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.8) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.8) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-08 20:15:55 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1
+Completed 500 Internal Server Error in 0ms
+
+ActionView::MissingTemplate (Missing template places/show, application/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Jason Edelstein/Documents/week3-homework/app/views"
+):
+  actionview (4.1.8) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.8) lib/action_view/lookup_context.rb:124:in `find'
+  C:in `find_template'
+  actionview (4.1.8) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.8) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.8) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.8) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.8) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.8) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.8) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.8) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.8) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.8) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.8) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.8) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.8) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.8) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-08 20:19:31 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined local variable or method `place' for #<#<Class:0x59e4cb8>:0x6750150>):
+     5:   
+     6:   <p>
+     7:     <span class="description">Description: <%= @place.description %></span>
+     8:     <%= number_to_currency(place.price/100, precision: 2) %>
+     9:   </p>
+    10:   
+    11: </div>
+  app/views/places/show.html.erb:8:in `_app_views_places_show_html_erb___902999142_54147612'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-08 20:19:31 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined local variable or method `place' for #<#<Class:0x59e4cb8>:0x64ab4a0>):
+     5:   
+     6:   <p>
+     7:     <span class="description">Description: <%= @place.description %></span>
+     8:     <%= number_to_currency(place.price/100, precision: 2) %>
+     9:   </p>
+    10:   
+    11: </div>
+  app/views/places/show.html.erb:8:in `_app_views_places_show_html_erb___902999142_52778016'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-08 20:19:44 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 40ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-08 20:20:22 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 50ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-08 20:20:35 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 30ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-08 20:20:53 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 50ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-08 20:21:03 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 50ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-08 20:21:10 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-08 20:21:22 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 40ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-08 20:21:36 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-08 20:21:47 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 50ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:31:19 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/4" for 127.0.0.1 at 2015-07-08 20:31:21 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 4 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 50ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:31:34 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)

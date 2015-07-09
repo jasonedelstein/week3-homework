@@ -1,0 +1,15 @@
+<div class="place">
+  <h2><%= @place.title %></h2>
+
+  <br />
+  
+  <p><%= image_tag @place.photo_url %></p>
+  
+  <br />
+  
+  <p><%= @place.description %></p>
+   
+   <p>Price: <%= number_to_currency(@place.price/100, precision: 2) %>. Probably.</p>
+
+  
+</div>

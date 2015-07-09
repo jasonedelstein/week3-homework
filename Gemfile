@@ -13,3 +13,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'quiet_assets'
 gem 'ez'
+
+gem 'coffee-script-source', '1.8.0'
