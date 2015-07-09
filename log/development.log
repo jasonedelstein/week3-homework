@@ -1159,3 +1159,573 @@ Processing by PlacesController#index as HTML
   [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
   Rendered places/index.html.erb within layouts/application (0.0ms)
 Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:40:24 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (20.0ms)
+Completed 500 Internal Server Error in 70ms
+
+ActionView::Template::Error (undefined local variable or method `delete' for #<#<Class:0x69b0b38>:0x69b0580>):
+    3:     <li>
+    4:       <p>
+    5:         <%= link_to place.title, "/places/#{place.id}" %>
+    6: 		<%= link_to delete, "/places/#{place.id}/delete" %>
+    7:       </p>
+    8:     </li>
+    9:   <% end %>
+  app/views/places/index.html.erb:6:in `block in _app_views_places_index_html_erb___959495488_55548816'
+  app/views/places/index.html.erb:2:in `_app_views_places_index_html_erb___959495488_55548816'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:41:02 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 63ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:41:17 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:41:45 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 41ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:41:52 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:43:59 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/1/delete" for 127.0.0.1 at 2015-07-08 20:44:01 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "places" WHERE "places"."id" = 1
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+Completed 500 Internal Server Error in 20ms
+
+ActionView::MissingTemplate (Missing partial places/_place with {:locale=>[:en], :formats=>[:html, :xml], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Jason Edelstein/Documents/week3-homework/app/views"
+):
+  app/controllers/places_controller.rb:14:in `delete'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.0ms)
+
+
+Started GET "/places/1/delete" for 127.0.0.1 at 2015-07-08 20:44:01 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 0ms
+
+NoMethodError (undefined method `delete' for nil:NilClass):
+  app/controllers/places_controller.rb:13:in `delete'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:44:11 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/2/delete" for 127.0.0.1 at 2015-07-08 20:44:16 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1
+Completed 500 Internal Server Error in 10ms
+
+NameError (undefined local variable or method `place' for #<PlacesController:0x650d0d8>):
+  app/controllers/places_controller.rb:13:in `delete'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.0ms)
+
+
+Started GET "/places/2/delete" for 127.0.0.1 at 2015-07-08 20:44:16 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1[0m
+Completed 500 Internal Server Error in 0ms
+
+NameError (undefined local variable or method `place' for #<PlacesController:0x6350f88>):
+  app/controllers/places_controller.rb:13:in `delete'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:44:24 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 30ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/2/delete" for 127.0.0.1 at 2015-07-08 20:44:32 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "places" WHERE "places"."id" = 2
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+Completed 500 Internal Server Error in 20ms
+
+ActionView::MissingTemplate (Missing partial places/_place with {:locale=>[:en], :formats=>[:html, :xml], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Jason Edelstein/Documents/week3-homework/app/views"
+):
+  app/controllers/places_controller.rb:14:in `delete'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.0ms)
+
+
+Started GET "/places/2/delete" for 127.0.0.1 at 2015-07-08 20:44:32 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1
+Completed 500 Internal Server Error in 0ms
+
+NoMethodError (undefined method `delete' for nil:NilClass):
+  app/controllers/places_controller.rb:13:in `delete'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-08 20:44:51 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-08 20:45:40 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/3/delete" for 127.0.0.1 at 2015-07-08 20:45:41 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 3 LIMIT 1[0m
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+Completed 500 Internal Server Error in 0ms
+
+ActionView::MissingTemplate (Missing partial places/_place with {:locale=>[:en], :formats=>[:html, :xml], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Jason Edelstein/Documents/week3-homework/app/views"
+):
+  app/controllers/places_controller.rb:13:in `delete'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.0ms)
+
+
+Started GET "/places/3/delete" for 127.0.0.1 at 2015-07-08 20:45:41 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 3 LIMIT 1[0m
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+Completed 500 Internal Server Error in 10ms
+
+ActionView::MissingTemplate (Missing partial places/_place with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Jason Edelstein/Documents/week3-homework/app/views"
+):
+  app/controllers/places_controller.rb:13:in `delete'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.0ms)
+
+
+Started GET "/places/3/delete" for 127.0.0.1 at 2015-07-08 20:45:53 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "places" WHERE "places"."id" = 3
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+Completed 500 Internal Server Error in 20ms
+
+ActionView::MissingTemplate (Missing partial places/_place with {:locale=>[:en], :formats=>[:html, :xml], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Jason Edelstein/Documents/week3-homework/app/views"
+):
+  app/controllers/places_controller.rb:14:in `delete'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.0ms)
+
+
+Started GET "/places/3/delete" for 127.0.0.1 at 2015-07-08 20:45:53 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 3 LIMIT 1
+Completed 500 Internal Server Error in 0ms
+
+NoMethodError (undefined method `delete' for nil:NilClass):
+  app/controllers/places_controller.rb:13:in `delete'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-08 20:47:37 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/4/delete" for 127.0.0.1 at 2015-07-08 20:47:39 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 4 LIMIT 1
+  [1m[36mSQL (10.0ms)[0m  [1mDELETE FROM "places" WHERE "places"."id" = 4[0m
+Completed 500 Internal Server Error in 10ms
+
+NameError (undefined local variable or method `root' for #<PlacesController:0x5fcbd28>):
+  app/controllers/places_controller.rb:14:in `delete'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/places/4/delete" for 127.0.0.1 at 2015-07-08 20:47:39 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 4 LIMIT 1
+Completed 500 Internal Server Error in 0ms
+
+NoMethodError (undefined method `delete' for nil:NilClass):
+  app/controllers/places_controller.rb:13:in `delete'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-08 20:48:11 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 50ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/5/delete" for 127.0.0.1 at 2015-07-08 20:48:13 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 5 LIMIT 1
+Completed 500 Internal Server Error in 0ms
+
+NameError (undefined local variable or method `root' for #<PlacesController:0x67e8e38>):
+  app/controllers/places_controller.rb:13:in `delete'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.0ms)
+
+
+Started GET "/places/5/delete" for 127.0.0.1 at 2015-07-08 20:48:13 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 5 LIMIT 1[0m
+Completed 500 Internal Server Error in 0ms
+
+NameError (undefined local variable or method `root' for #<PlacesController:0x6522ae0>):
+  app/controllers/places_controller.rb:13:in `delete'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.0ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-08 20:48:16 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-08 20:48:17 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 30ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/5/delete" for 127.0.0.1 at 2015-07-08 20:48:31 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 5 LIMIT 1
+  [1m[36mSQL (10.0ms)[0m  [1mDELETE FROM "places" WHERE "places"."id" = 5[0m
+Completed 500 Internal Server Error in 20ms
+
+NameError (undefined local variable or method `root' for #<PlacesController:0x6b355f0>):
+  app/controllers/places_controller.rb:14:in `delete'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.0ms)
+
+
+Started GET "/places/5/delete" for 127.0.0.1 at 2015-07-08 20:48:32 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 5 LIMIT 1
+Completed 500 Internal Server Error in 0ms
+
+NoMethodError (undefined method `delete' for nil:NilClass):
+  app/controllers/places_controller.rb:13:in `delete'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.0ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-08 20:48:41 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "places" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "photo_url" text, "price" integer DEFAULT 0) [0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (10.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "places" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "photo_url" text, "price" integer DEFAULT 0) [0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (10.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "places"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (10.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "The ragged old market of Spite is known for its silk-weavers and its pickpockets. Blythenhale is notorious for its feral cats. Flowerdene Street is the heart of the worst rookery in Fallen London."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/spite.jpg"], ["price", 500], ["title", "Spite"]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)[0m  [["description", "Moloch Street Underground Station is the first stop on the journey to Hell. Clathermont's Tattoo Parlour, haunt of spies, is here. Hangman's Arch can be a good place to hear gossip, and is always a good place for a hanging."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/ladybones.jpg"], ["price", 1000], ["title", "Ladybones Road"]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "The Bazaar is located at the heart of Fallen London, in the Neath, a cavern of impossible size, by the Unterzee, a tremendous saltwater lake. They say it's the skull of some defunct pagan god. That doesn't sound very likely. Although it would explain the dreams."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/header.jpg"], ["price", 4], ["title", "The Bazaar"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)[0m  [["description", "A sinister fungal wilderness by the river. The Department of Menace Eradication subcontracts the adventurous to deal with the things that slither out of Bugsby's Marshes. An observatory atop the hill employs only blind men."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/watchmakershill.jpg"], ["price", 2000], ["title", "Watchmaker's Hill"]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "A haunt of poets, prostitutes and other low types, and location of the notorious Singing Mandrake. Elderwick is famous for its booksellers. Hollow Street offers the best honey-dens in the city."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/veilgarden.jpg"], ["price", 90], ["title", "Veilgarden"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-08 20:50:38 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 120ms (Views: 80.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/2/delete" for 127.0.0.1 at 2015-07-08 20:54:30 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "places" WHERE "places"."id" = 2[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 30ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:54:30 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 50ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:54:32 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/1/delete" for 127.0.0.1 at 2015-07-08 20:54:43 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 1 LIMIT 1
+  [1m[36mSQL (10.0ms)[0m  [1mDELETE FROM "places" WHERE "places"."id" = 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:54:43 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 30ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/3/delete" for 127.0.0.1 at 2015-07-08 20:54:45 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "places" WHERE "places"."id" = 3
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:54:45 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/4/delete" for 127.0.0.1 at 2015-07-08 20:54:47 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 4 LIMIT 1
+  [1m[36mSQL (10.0ms)[0m  [1mDELETE FROM "places" WHERE "places"."id" = 4[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:54:47 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 30ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/5/delete" for 127.0.0.1 at 2015-07-08 20:54:48 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 5 LIMIT 1[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "places" WHERE "places"."id" = 5
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:54:48 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 50ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "places" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "photo_url" text, "price" integer DEFAULT 0) [0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (10.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (10.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "places" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "photo_url" text, "price" integer DEFAULT 0) [0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (10.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "places"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "The ragged old market of Spite is known for its silk-weavers and its pickpockets. Blythenhale is notorious for its feral cats. Flowerdene Street is the heart of the worst rookery in Fallen London."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/spite.jpg"], ["price", 500], ["title", "Spite"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)[0m  [["description", "Moloch Street Underground Station is the first stop on the journey to Hell. Clathermont's Tattoo Parlour, haunt of spies, is here. Hangman's Arch can be a good place to hear gossip, and is always a good place for a hanging."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/ladybones.jpg"], ["price", 1000], ["title", "Ladybones Road"]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "The Bazaar is located at the heart of Fallen London, in the Neath, a cavern of impossible size, by the Unterzee, a tremendous saltwater lake. They say it's the skull of some defunct pagan god. That doesn't sound very likely. Although it would explain the dreams."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/header.jpg"], ["price", 4], ["title", "The Bazaar"]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)[0m  [["description", "A sinister fungal wilderness by the river. The Department of Menace Eradication subcontracts the adventurous to deal with the things that slither out of Bugsby's Marshes. An observatory atop the hill employs only blind men."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/watchmakershill.jpg"], ["price", 2000], ["title", "Watchmaker's Hill"]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "A haunt of poets, prostitutes and other low types, and location of the notorious Singing Mandrake. Elderwick is famous for its booksellers. Hollow Street offers the best honey-dens in the city."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/veilgarden.jpg"], ["price", 90], ["title", "Veilgarden"]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "places" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "photo_url" text, "price" integer DEFAULT 0) [0m
+  [1m[35m (10.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (10.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "places" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "photo_url" text, "price" integer DEFAULT 0) [0m
+  [1m[35m (10.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (10.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "places"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "The ragged old market of Spite is known for its silk-weavers and its pickpockets. Blythenhale is notorious for its feral cats. Flowerdene Street is the heart of the worst rookery in Fallen London."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/spite.jpg"], ["price", 500], ["title", "Spite"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (10.0ms)[0m  [1mINSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)[0m  [["description", "Moloch Street Underground Station is the first stop on the journey to Hell. Clathermont's Tattoo Parlour, haunt of spies, is here. Hangman's Arch can be a good place to hear gossip, and is always a good place for a hanging."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/ladybones.jpg"], ["price", 1000], ["title", "Ladybones Road"]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "The Bazaar is located at the heart of Fallen London, in the Neath, a cavern of impossible size, by the Unterzee, a tremendous saltwater lake. They say it's the skull of some defunct pagan god. That doesn't sound very likely. Although it would explain the dreams."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/header.jpg"], ["price", 4], ["title", "The Bazaar"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)[0m  [["description", "A sinister fungal wilderness by the river. The Department of Menace Eradication subcontracts the adventurous to deal with the things that slither out of Bugsby's Marshes. An observatory atop the hill employs only blind men."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/watchmakershill.jpg"], ["price", 2000], ["title", "Watchmaker's Hill"]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "A haunt of poets, prostitutes and other low types, and location of the notorious Singing Mandrake. Elderwick is famous for its booksellers. Hollow Street offers the best honey-dens in the city."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/veilgarden.jpg"], ["price", 90], ["title", "Veilgarden"]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 20:55:50 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 120ms (Views: 90.0ms | ActiveRecord: 0.0ms)

@@ -3,6 +3,8 @@
     <li>
       <p>
         <%= link_to place.title, "/places/#{place.id}" %>
+		<br />
+		<%= link_to "delete #{place.title}", "/places/#{place.id}/delete" %>
       </p>
     </li>
   <% end %>
