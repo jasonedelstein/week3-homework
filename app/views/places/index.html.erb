@@ -1,3 +1,5 @@
+<p>Delicious friend, to create a new place, simply <a href="/places/new">click here.</a></p>
+
 <ol>
   <% @places.each do |place| %>
     <li>
@@ -5,6 +7,8 @@
         <%= link_to place.title, "/places/#{place.id}" %>
 		<br />
 		<%= link_to "delete #{place.title}", "/places/#{place.id}/delete" %>
+		<br />
+		<%= link_to "update #{place.title}", "/places/#{place.id}/edit" %>
       </p>
     </li>
   <% end %>

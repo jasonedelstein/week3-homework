@@ -1,0 +1,17 @@
+<h2>So you want to change a place?</h2>
+
+<p>That's fine. They're always changing...</p>
+
+<br />
+
+<form method = "GET" action="/places/<%= @place.id %>/update">
+Title: <input type="text" name="title" size="50" maxlength="255" required value="<%= @place.title %>"/> 
+<br />
+Photo URL: <input type="text" name="photo_url" size="100" required value="<%= @place.photo_url %>" /> 
+<br />
+Price: <input type="number" name="price" min="0" required value="<%= @place.price %>" />
+<br />
+Description: <textarea name="description" rows="6" cols="50" required><%= @place.description %></textarea>
+<br />
+<input type="submit" value="Submit" />
+</form>

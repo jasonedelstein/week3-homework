@@ -1,0 +1,17 @@
+<h2>So you want to add a new place?</h2>
+
+<p>Tell me about it...</p>
+
+<br />
+
+<form method = "GET" action="/places/create">
+Title: <input type="text" name="title" size="50" maxlength="255" required /> 
+<br />
+Photo URL: <input type="text" name="photo_url" size="100" required /> 
+<br />
+Price: <input type="number" name="price" min="0" required />
+<br />
+Description: <textarea name="description" required></textarea>
+<br />
+<input type="submit" value="Submit" />
+</form>
