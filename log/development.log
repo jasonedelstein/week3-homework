@@ -3477,3 +3477,1302 @@ Processing by PlacesController#index as HTML
   [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
   Rendered places/index.html.erb within layouts/application (2.0ms)
 Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-14 09:51:57 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (2.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 116ms (Views: 74.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/places/1/edit" for 127.0.0.1 at 2015-07-14 09:51:59 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlace Load (13.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 1 LIMIT 1
+  Rendered places/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 94ms (Views: 39.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/places/1/delete" for 127.0.0.1 at 2015-07-14 09:52:03 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (122.0ms)[0m  DELETE FROM "places" WHERE "places"."id" = 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 133ms (ActiveRecord: 122.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-14 09:52:03 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 61ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/5/edit" for 127.0.0.1 at 2015-07-14 09:52:05 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 5 LIMIT 1
+  Rendered places/edit.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 50ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/5/update?title=Veilgarde&photo_url=http%3A%2F%2Fechobazaar.wdfiles.com%2Flocal--files%2Fart%2Fveilgarden.jpg&price=90&description=A+haunt+of+poets%2C+prostitutes+and+other+low+types%2C+and+location+of+the+notorious+Singing+Mandrake.+Elderwick+is+famous+for+its+booksellers.+Hollow+Street+offers+the+best+honey-dens+in+the+city." for 127.0.0.1 at 2015-07-14 09:52:09 -0500
+Processing by PlacesController#update as HTML
+  Parameters: {"title"=>"Veilgarde", "photo_url"=>"http://echobazaar.wdfiles.com/local--files/art/veilgarden.jpg", "price"=>"90", "description"=>"A haunt of poets, prostitutes and other low types, and location of the notorious Singing Mandrake. Elderwick is famous for its booksellers. Hollow Street offers the best honey-dens in the city.", "id"=>"5"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 5 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mUPDATE "places" SET "title" = ? WHERE "places"."id" = 5[0m  [["title", "Veilgarde"]]
+  [1m[35m (95.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/places/5
+Completed 302 Found in 208ms (ActiveRecord: 97.0ms)
+
+
+Started GET "/places/5" for 127.0.0.1 at 2015-07-14 09:52:09 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 5 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (384.0ms)
+Completed 200 OK in 438ms (Views: 433.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-14 09:52:14 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-14 09:52:59 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 41ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-14 09:53:00 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 56ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/create?title=coolsign+manager&photo_url=fdsf&price=1&description=fggf" for 127.0.0.1 at 2015-07-14 09:53:11 -0500
+Processing by PlacesController#create as HTML
+  Parameters: {"title"=>"coolsign manager", "photo_url"=>"fdsf", "price"=>"1", "description"=>"fggf"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)[0m  [["description", "fggf"], ["photo_url", "fdsf"], ["price", 1], ["title", "coolsign manager"]]
+  [1m[35m (76.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 176ms (ActiveRecord: 78.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-14 09:53:11 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (1.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/places/9" for 127.0.0.1 at 2015-07-14 09:53:13 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 9 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/fdsf" for 127.0.0.1 at 2015-07-14 09:53:13 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/fdsf"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (119.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (283.0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-14 09:54:42 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/9/edit" for 127.0.0.1 at 2015-07-14 09:54:44 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 9 LIMIT 1
+  Rendered places/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 51ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/9/update?title=coolsign+manager&photo_url=fdsf&price=10&description=fggf" for 127.0.0.1 at 2015-07-14 09:54:47 -0500
+Processing by PlacesController#update as HTML
+  Parameters: {"title"=>"coolsign manager", "photo_url"=>"fdsf", "price"=>"10", "description"=>"fggf", "id"=>"9"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 9 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "places" SET "price" = ? WHERE "places"."id" = 9[0m  [["price", 10]]
+  [1m[35m (77.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/places/9
+Completed 302 Found in 86ms (ActiveRecord: 78.0ms)
+
+
+Started GET "/places/9" for 127.0.0.1 at 2015-07-14 09:54:47 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 9 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 62ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/fdsf" for 127.0.0.1 at 2015-07-14 09:54:48 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/fdsf"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-14 09:54:49 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 69ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/9" for 127.0.0.1 at 2015-07-14 09:54:52 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 9 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 57ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/fdsf" for 127.0.0.1 at 2015-07-14 09:54:52 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/fdsf"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.0ms)
+
+
+Started GET "/places/9" for 127.0.0.1 at 2015-07-14 09:54:54 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mPlace Load (1.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 9 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 63ms (Views: 59.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images/fdsf" for 127.0.0.1 at 2015-07-14 09:54:54 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/fdsf"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-14 09:55:00 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 59ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+
+
+Started GET "/places/5" for 127.0.0.1 at 2015-07-14 09:56:52 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPlace Load (1.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 5 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-14 09:56:53 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/4" for 127.0.0.1 at 2015-07-14 09:56:54 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 4 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-14 09:56:57 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 46ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/9" for 127.0.0.1 at 2015-07-14 09:56:59 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 9 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/fdsf" for 127.0.0.1 at 2015-07-14 09:56:59 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/fdsf"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.0ms)
+
+
+Started GET "/places/9/edit" for 127.0.0.1 at 2015-07-14 09:57:02 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 9 LIMIT 1[0m
+  Rendered places/edit.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/9/update?title=coolsign+manager&photo_url=fdsf&price=100&description=fggf" for 127.0.0.1 at 2015-07-14 09:57:05 -0500
+Processing by PlacesController#update as HTML
+  Parameters: {"title"=>"coolsign manager", "photo_url"=>"fdsf", "price"=>"100", "description"=>"fggf", "id"=>"9"}
+  [1m[35mPlace Load (1.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 9 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "places" SET "price" = ? WHERE "places"."id" = 9  [["price", 100]]
+  [1m[36m (64.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/places/9
+Completed 302 Found in 73ms (ActiveRecord: 66.0ms)
+
+
+Started GET "/places/9" for 127.0.0.1 at 2015-07-14 09:57:05 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 9 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/fdsf" for 127.0.0.1 at 2015-07-14 09:57:05 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/fdsf"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-14 09:57:08 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 53ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/9" for 127.0.0.1 at 2015-07-14 09:57:10 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 9 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/fdsf" for 127.0.0.1 at 2015-07-14 09:57:11 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/fdsf"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-14 09:57:12 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 42ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/9/edit" for 127.0.0.1 at 2015-07-14 09:57:13 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 9 LIMIT 1
+  Rendered places/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/9/update?title=coolsign+manager&photo_url=fdsf&price=50&description=fggf" for 127.0.0.1 at 2015-07-14 09:57:16 -0500
+Processing by PlacesController#update as HTML
+  Parameters: {"title"=>"coolsign manager", "photo_url"=>"fdsf", "price"=>"50", "description"=>"fggf", "id"=>"9"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 9 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "places" SET "price" = ? WHERE "places"."id" = 9[0m  [["price", 50]]
+  [1m[35m (86.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/places/9
+Completed 302 Found in 94ms (ActiveRecord: 87.0ms)
+
+
+Started GET "/places/9" for 127.0.0.1 at 2015-07-14 09:57:16 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 9 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 55ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/fdsf" for 127.0.0.1 at 2015-07-14 09:57:16 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/fdsf"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-14 11:04:44 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-14 11:04:46 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/3" for 127.0.0.1 at 2015-07-14 11:04:49 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 3 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/9" for 127.0.0.1 at 2015-07-14 11:04:50 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 9 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 55ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/fdsf" for 127.0.0.1 at 2015-07-14 11:04:50 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/fdsf"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.0ms)
+
+
+Started GET "/places/9" for 127.0.0.1 at 2015-07-14 11:06:00 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 9 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 75ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/fdsf" for 127.0.0.1 at 2015-07-14 11:06:00 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/fdsf"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.0ms)
+
+
+Started GET "/places/9" for 127.0.0.1 at 2015-07-14 11:06:01 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 9 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/fdsf" for 127.0.0.1 at 2015-07-14 11:06:02 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/fdsf"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.0ms)
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-14 11:06:15 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/5" for 127.0.0.1 at 2015-07-14 11:06:17 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 5 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/5" for 127.0.0.1 at 2015-07-14 11:07:00 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 5 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/5" for 127.0.0.1 at 2015-07-14 11:07:13 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 5 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 45ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/5" for 127.0.0.1 at 2015-07-14 11:10:46 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 5 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 51ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/5" for 127.0.0.1 at 2015-07-14 11:10:57 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 5 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 51ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/5" for 127.0.0.1 at 2015-07-14 11:11:13 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPlace Load (1.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 5 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/places/5" for 127.0.0.1 at 2015-07-14 11:11:29 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 5 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (32.0ms)
+Completed 500 Internal Server Error in 42ms
+
+ActionView::Template::Error (String can't be coerced into Fixnum):
+     9:   
+    10:   <p><%= @place.description %></p>
+    11:    
+    12:    <p>Price: $<%= @place.price/100.to_s %>. Probably.</p>
+    13: 
+    14:    <%= link_to "Return to the place listing, delicious friend!", "/places" %>
+    15:   
+  app/views/places/show.html.erb:12:in `/'
+  app/views/places/show.html.erb:12:in `_app_views_places_show_html_erb___631778002_56960580'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-14 11:11:37 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-14 11:11:52 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-14 11:11:54 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-14 11:11:55 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-14 11:11:56 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 48ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/4" for 127.0.0.1 at 2015-07-14 11:11:57 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPlace Load (1.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 4 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 51ms (Views: 48.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/places/9" for 127.0.0.1 at 2015-07-14 11:12:00 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mPlace Load (1.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 9 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 49ms (Views: 47.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images/fdsf" for 127.0.0.1 at 2015-07-14 11:12:00 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/fdsf"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (43.0ms)
+
+
+Started GET "/places/5" for 127.0.0.1 at 2015-07-14 11:12:02 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 5 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-14 11:13:14 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 38ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-14 11:13:15 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined local variable or method `price' for #<#<Class:0x6fa2f78>:0x6ca7538>):
+     9:   
+    10:   <p><%= @place.description %></p>
+    11:    
+    12:    <p>Price: $<%= '%.2f' % (price.to_i/100.0) %>. Probably.</p>
+    13: 
+    14:    <%= link_to "Return to the place listing, delicious friend!", "/places" %>
+    15:   
+  app/views/places/show.html.erb:12:in `_app_views_places_show_html_erb___631778002_56963964'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-14 11:13:15 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlace Load (1.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined local variable or method `price' for #<#<Class:0x6fa2f78>:0x6ac2768>):
+     9:   
+    10:   <p><%= @place.description %></p>
+    11:    
+    12:    <p>Price: $<%= '%.2f' % (price.to_i/100.0) %>. Probably.</p>
+    13: 
+    14:    <%= link_to "Return to the place listing, delicious friend!", "/places" %>
+    15:   
+  app/views/places/show.html.erb:12:in `_app_views_places_show_html_erb___631778002_55971228'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-14 11:13:25 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 46ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-14 11:13:27 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 38ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/9" for 127.0.0.1 at 2015-07-14 11:13:31 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 9 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 49ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/fdsf" for 127.0.0.1 at 2015-07-14 11:13:31 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/fdsf"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.0ms)
+
+
+Started GET "/places/9" for 127.0.0.1 at 2015-07-14 11:37:10 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 9 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 57ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/fdsf" for 127.0.0.1 at 2015-07-14 11:37:10 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/fdsf"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (32.0ms)
+
+
+Started GET "/images/fdsf" for 127.0.0.1 at 2015-07-14 11:37:11 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/fdsf"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.0ms)
+
+
+Started GET "/places/9" for 127.0.0.1 at 2015-07-14 11:37:49 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 9 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 7ms
+
+SyntaxError (C:/Users/jasone/Documents/week3-homework/app/views/places/show.html.erb:12: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...ruby currency formatter, but it had rounding issues. I went ...
+...                               ^
+C:/Users/jasone/Documents/week3-homework/app/views/places/show.html.erb:13: syntax error, unexpected tIVAR, expecting '('
+@output_buffer.safe_append='   <p>Price: $'...
+              ^):
+  app/views/places/show.html.erb:12: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/places/show.html.erb:13: syntax error, unexpected tIVAR, expecting '('
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.0ms)
+
+
+Started GET "/places/9" for 127.0.0.1 at 2015-07-14 11:37:56 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mPlace Load (1.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 9 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images/fdsf" for 127.0.0.1 at 2015-07-14 11:37:57 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/fdsf"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (32.0ms)
+  [1m[36m (429.0ms)[0m  [1mCREATE TABLE "places" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "photo_url" text, "price" integer DEFAULT 0) [0m
+  [1m[35m (134.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (60.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (100.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (118.0ms)[0m  [1mCREATE TABLE "places" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "photo_url" text, "price" integer DEFAULT 0) [0m
+  [1m[35m (59.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (84.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (1.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (82.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (66.0ms)[0m  DELETE FROM "places"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "The ragged old market of Spite is known for its silk-weavers and its pickpockets. Blythenhale is notorious for its feral cats. Flowerdene Street is the heart of the worst rookery in Fallen London."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/spite.jpg"], ["price", 500], ["title", "Spite"]]
+  [1m[36m (117.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)[0m  [["description", "Moloch Street Underground Station is the first stop on the journey to Hell. Clathermont's Tattoo Parlour, haunt of spies, is here. Hangman's Arch can be a good place to hear gossip, and is always a good place for a hanging."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/ladybones.jpg"], ["price", 1000], ["title", "Ladybones Road"]]
+  [1m[35m (71.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "The Bazaar is located at the heart of Fallen London, in the Neath, a cavern of impossible size, by the Unterzee, a tremendous saltwater lake. They say it's the skull of some defunct pagan god. That doesn't sound very likely. Although it would explain the dreams."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/header.jpg"], ["price", 4], ["title", "The Bazaar"]]
+  [1m[36m (230.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)[0m  [["description", "A sinister fungal wilderness by the river. The Department of Menace Eradication subcontracts the adventurous to deal with the things that slither out of Bugsby's Marshes. An observatory atop the hill employs only blind men."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/watchmakershill.jpg"], ["price", 2000], ["title", "Watchmaker's Hill"]]
+  [1m[35m (77.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "A haunt of poets, prostitutes and other low types, and location of the notorious Singing Mandrake. Elderwick is famous for its booksellers. Hollow Street offers the best honey-dens in the city."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/veilgarden.jpg"], ["price", 90], ["title", "Veilgarden"]]
+  [1m[36m (128.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-14 16:50:14 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (4.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 823ms (Views: 755.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/places/1" for 127.0.0.1 at 2015-07-14 16:50:18 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 1 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 118ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/5" for 127.0.0.1 at 2015-07-14 16:50:21 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 5 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 59ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/4" for 127.0.0.1 at 2015-07-14 16:50:23 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 4 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 43ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/3" for 127.0.0.1 at 2015-07-14 16:50:26 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 3 LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 60ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-14 16:54:04 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (1.0ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/places/1/delete" for 127.0.0.1 at 2015-07-14 16:54:06 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (94.0ms)[0m  DELETE FROM "places" WHERE "places"."id" = 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 103ms (ActiveRecord: 94.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-14 16:54:06 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 48ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/2/edit" for 127.0.0.1 at 2015-07-14 16:54:07 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlace Load (1.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1
+  Rendered places/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 81ms (Views: 77.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/places/2/update?title=Ladybones+Road&photo_url=http%3A%2F%2Fechobazaar.wdfiles.com%2Flocal--files%2Fart%2Fladybones.jpg&price=1000&description=Moloch+Street+Underground+Station+is+the+first+stop+on+the+journey+to+Hell.+Clathermont%27s+Tattoo+Parlour%2C+haunt+of+spies%2C+is+here.+Hangman%27s+Arch+can+be+a+good+place+to+hear+gossip%2C+and+is+always+a+good+place+for+a+hanging." for 127.0.0.1 at 2015-07-14 16:54:09 -0500
+Processing by PlacesController#update as HTML
+  Parameters: {"title"=>"Ladybones Road", "photo_url"=>"http://echobazaar.wdfiles.com/local--files/art/ladybones.jpg", "price"=>"1000", "description"=>"Moloch Street Underground Station is the first stop on the journey to Hell. Clathermont's Tattoo Parlour, haunt of spies, is here. Hangman's Arch can be a good place to hear gossip, and is always a good place for a hanging.", "id"=>"2"}
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/places/2
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/places/2" for 127.0.0.1 at 2015-07-14 16:54:09 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlace Load (0.0ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 2 LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-14 16:54:11 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 58ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (269.0ms)[0m  [1mCREATE TABLE "places" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "photo_url" text, "price" integer DEFAULT 0) [0m
+  [1m[35m (64.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (75.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (1.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (90.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36m (114.0ms)[0m  [1mCREATE TABLE "places" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "photo_url" text, "price" integer DEFAULT 0) [0m
+  [1m[35m (107.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (254.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (1.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (88.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (87.0ms)[0m  DELETE FROM "places"
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "The ragged old market of Spite is known for its silk-weavers and its pickpockets. Blythenhale is notorious for its feral cats. Flowerdene Street is the heart of the worst rookery in Fallen London."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/spite.jpg"], ["price", 500], ["title", "Spite"]]
+  [1m[36m (160.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)[0m  [["description", "Moloch Street Underground Station is the first stop on the journey to Hell. Clathermont's Tattoo Parlour, haunt of spies, is here. Hangman's Arch can be a good place to hear gossip, and is always a good place for a hanging."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/ladybones.jpg"], ["price", 1000], ["title", "Ladybones Road"]]
+  [1m[35m (81.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "The Bazaar is located at the heart of Fallen London, in the Neath, a cavern of impossible size, by the Unterzee, a tremendous saltwater lake. They say it's the skull of some defunct pagan god. That doesn't sound very likely. Although it would explain the dreams."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/header.jpg"], ["price", 4], ["title", "The Bazaar"]]
+  [1m[36m (73.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)[0m  [["description", "A sinister fungal wilderness by the river. The Department of Menace Eradication subcontracts the adventurous to deal with the things that slither out of Bugsby's Marshes. An observatory atop the hill employs only blind men."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/watchmakershill.jpg"], ["price", 2000], ["title", "Watchmaker's Hill"]]
+  [1m[35m (98.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "places" ("description", "photo_url", "price", "title") VALUES (?, ?, ?, ?)  [["description", "A haunt of poets, prostitutes and other low types, and location of the notorious Singing Mandrake. Elderwick is famous for its booksellers. Hollow Street offers the best honey-dens in the city."], ["photo_url", "http://echobazaar.wdfiles.com/local--files/art/veilgarden.jpg"], ["price", 90], ["title", "Veilgarden"]]
+  [1m[36m (106.0ms)[0m  [1mcommit transaction[0m

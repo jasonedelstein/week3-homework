@@ -9,7 +9,9 @@
   
   <p><%= @place.description %></p>
    
-   <p>Price: <%= number_to_currency(@place.price/100, precision: 2) %>. Probably.</p>
+	<% #I originally tried to use the ruby currency formatter, but it had rounding issues. I went with the solution below. Lazy, or clever? YOU DECIDE. %>
+	
+   <p>Price: $<%= '%.2f' % (@place.price.to_i/100.0) %>. Probably.</p>
 
    <%= link_to "Return to the place listing, delicious friend!", "/places" %>
   

@@ -10,10 +10,10 @@ Rails.application.routes.draw do
 	
 	get '/places/:id/update' => 'places#update'
 	
-	get '/places' => 'places#index'
+	get '/places/:id/delete' => 'places#delete'
 	
 	get '/places/:id' => 'places#show'
 	
-	get '/places/:id/delete' => 'places#delete'
+	get '/places' => 'places#index'
 
 end
